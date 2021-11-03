@@ -55,8 +55,8 @@ namespace DRAGO.Controllers
         }
 
         //GET: Traer auto por marca y modelo
-        [HttpGet("getbymarcaymodelo/{marca}/{modelo}")]//endpoint
-        public IEnumerable<Auto> getbymarcaymodelo(string marca, string modelo)
+        [HttpGet("Getbymarcaymodelo/{marca}/{modelo}")]//endpoint
+        public IEnumerable<Auto> Getbymarcaymodelo(string marca, string modelo)
         {
             var vehiculo = (from auto in context.Vehiculo
                             where auto.Marca == marca&&auto.Modelo==modelo
@@ -65,8 +65,8 @@ namespace DRAGO.Controllers
         }
 
         //GET: Traer auto por color
-        [HttpGet("getbyColor/{color}")]
-        public IEnumerable<Auto> getbyolor(string color)
+        [HttpGet("GetbyColor/{color}")]
+        public IEnumerable<Auto> Getbyolor(string color)
         {
             var vehiculo = (from auto in context.Vehiculo
                            where auto.Color == color
