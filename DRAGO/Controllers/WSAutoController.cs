@@ -28,12 +28,12 @@ namespace DRAGO.Controllers
         }
 
         //GET: Traer auto por modelo
-        [HttpGet("GetByModelo/{modelo}")]//endpoint
-        public IEnumerable<Auto> GetByModelo(string modelo)
+        [HttpGet("getbymodelo/{modelo}")]//endpoint
+        public IEnumerable<Auto> getbymodelo(string modelo)
         {
-            var vehiculo = (from m in context.Vehiculo
-                           where m.Modelo == modelo
-                           select m).ToList();
+            var vehiculo = (from auto in context.Vehiculo
+                           where auto.Modelo == modelo
+                           select auto).ToList();
             return vehiculo;
         }
 
